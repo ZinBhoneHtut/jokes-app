@@ -6,11 +6,10 @@ import guru.springframework.norris.chuck.ChuckNorrisQuotes;
 @Service
 public class JokeServiceImpl implements JokeService {
 	
-	private ChuckNorrisQuotes chuckNorrisQuotes;
+	private final ChuckNorrisQuotes chuckNorrisQuotes;
 	
 	public JokeServiceImpl() {
-		if(chuckNorrisQuotes == null)
-			this.chuckNorrisQuotes = new ChuckNorrisQuotes();
+		this.chuckNorrisQuotes = new ChuckNorrisQuotes();
 	}
 	
 	@Override
